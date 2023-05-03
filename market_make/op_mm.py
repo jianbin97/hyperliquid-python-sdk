@@ -36,10 +36,10 @@ ALLOWABLE_DEVIATION = 0.3
 
 # The maximum absolute position value the strategy can accumulate in units of the coin.
 # i.e. the strategy will place orders such that it can long up to 1 ETH or short up to 1 ETH
-MAX_POSITION = 20
+MAX_POSITION = 10
 
 # The coin to add liquidity on
-COIN = "ARB"
+COIN = "OP"
 
 InFlightOrder = TypedDict("InFlightOrder", {"type": Literal["in_flight_order"], "time": int})
 Resting = TypedDict("Resting", {"type": Literal["resting"], "px": float, "oid": int})
@@ -179,7 +179,6 @@ def main():
     account = eth_account.Account.from_key(config["secret_key"])
     print("Running with account address:", account.address)
     BasicAdder(account, constants.MAINNET_API_URL)
-
 
 if __name__ == "__main__":
     main()
