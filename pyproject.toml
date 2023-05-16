@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "hyperliquid-python-sdk"
-version = "0.1.7"
+version = "0.1.8"
 description = "SDK for Hyperliquid API trading with Python."
 readme = "README.md"
 authors = ["Hyperliquid <hello@hyperliquid.xyz>"]
@@ -47,6 +47,7 @@ eth-utils = "^2.1.0"
 eth-abi = "^3.0.1"
 eth-account = "^0.8.0"
 websocket-client = "^1.5.1"
+requests = "^2.28.2"
 
 [tool.poetry.dev-dependencies]
 python = "3.10.10"
